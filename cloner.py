@@ -6,8 +6,8 @@ from ROOT import *
 samples=["*Wenu*p3317*","*Wmunu*p3317*","*Wtaunu*p3317*","*Zee*p3317*","*Zmumu*p3317*","*Ztautau*p3317*"]
 channels = ["ee/","emu/","mumu/","ejets/","mujets/"]
 
-input_root_file="/eos/atlas/atlascerngroupdisk/phys-top/toproperties/ttgamma/v010_production/CR1/"
-output_root_file="/eos/atlas/atlascerngroupdisk/phys-top/toproperties/ttgamma/v010_production/CR1S/"
+input_root_file="/eos/atlas/atlascerngroupdisk/phys-top/toproperties/ttgamma/v010_production/SR1/"
+output_root_file="/eos/atlas/atlascerngroupdisk/phys-top/toproperties/ttgamma/v010_production/SR1S/"
 
 systematic_tree = []
 syst_file = open("systTrees.txt", "r") 
