@@ -3,11 +3,13 @@
 import os
 from ROOT import *
 
-samples=["*Wenu*p3317*","*Wmunu*p3317*","*Wtaunu*p3317*","*Zee*p3317*","*Zmumu*p3317*","*Ztautau*p3317*"]
-channels = ["ee/","emu/","mumu/","ejets/","mujets/"]
+#samples=["*Wenu*p3317*","*Wmunu*p3317*","*Wtaunu*p3317*","*Zee*p3317*","*Zmumu*p3317*","*Ztautau*p3317*"]
+samples=["*ttV*p3317*"]
+#channels = ["ee/","emu/","mumu/","ejets/","mujets/"]
+channels = ["ee/"]
 
-input_root_file="/eos/atlas/atlascerngroupdisk/phys-top/toproperties/ttgamma/v010_production/SR1/"
-output_root_file="/eos/atlas/atlascerngroupdisk/phys-top/toproperties/ttgamma/v010_production/SR1S/"
+input_root_file="/eos/atlas/atlascerngroupdisk/phys-top/toproperties/ttgamma/v010_february18/SR1/"
+output_root_file="/eos/atlas/atlascerngroupdisk/phys-top/toproperties/ttgamma/v010_february18/SR1S/"
 
 systematic_tree = []
 syst_file = open("systTrees.txt", "r") 
@@ -22,7 +24,8 @@ for channel in channels:
   for sample in samples:
     chain.Add(input_root_file+channel+sample)
 
-  newFile=TFile(output_root_file+channel+"3641XX.Vjets.p3317.v010.root","recreate")
+  #newFile=TFile(output_root_file+channel+"3641XX.Vjets.p3317.v010.root","recreate")
+  newFile=TFile(output_root_file+channel+"3641XX.TTV_DummySysts.p3317.v010.root","recreate")
 
   # Loop over the systematics.
   # Create a clone of the nominal and rename it the systematic
